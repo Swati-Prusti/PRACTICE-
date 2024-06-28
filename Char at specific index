@@ -1,0 +1,25 @@
+import java.util.*;
+public class PROG4 {
+
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the original string");
+		String s=sc.nextLine();
+		System.out.println("Enter the index that you want to replace: ");
+		int n=sc.nextInt();
+		sc.nextLine();
+		System.out.println("Enter new character: ");
+		char a=sc.nextLine().charAt(0);
+		String replaced="";
+		if(n<0 || n>s.length())
+		{
+			System.out.println("Invalid index");
+		}
+		else 
+		{
+			replaced=s.substring(0,n)+a+s.substring(n+1);
+			System.out.println("Final string: "+replaced);
+		}
+	}
+}
